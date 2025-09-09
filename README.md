@@ -1,8 +1,4 @@
 # react-context-api
-
-> 
-> 
-> 
 > Ciao ragazzi!
 > 
 > Esercizio di oggi: **React Context API**

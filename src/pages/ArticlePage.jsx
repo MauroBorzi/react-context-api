@@ -18,7 +18,7 @@ const ArticlePage = () => {
           <h1 className="text-center text-green">ARTICOLI</h1>
         </div>
         {fromData.map(art => {
-          const { category, id, description, image, price, title } = art
+          const { id, image, price, title } = art
           return (
             <div className="col-12 col-md-4 col-lg-3" key={id}>
               <div className="card h-100">

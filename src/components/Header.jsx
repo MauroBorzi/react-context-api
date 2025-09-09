@@ -1,6 +1,10 @@
 import { NavLink } from "react-router-dom"
+import { useBudget } from "../contexts/BudgetContext"
 
 const Header = () => {
+
+  const { budgetMode } = useBudget()
+
   return (
     <header>
       <div className="container-fluid py-4">
@@ -10,7 +14,7 @@ const Header = () => {
               <h1 className="text-green">BoolArticles</h1>
             </div>
             <div className="padding">
-              <button type="button" class="btn btn-success">MODALITA' BUDGET</button>
+              <button type="button" class="btn btn-success">{ }</button>
             </div>
             <div>
               <ul className="list-unstyled d-flex padding">
