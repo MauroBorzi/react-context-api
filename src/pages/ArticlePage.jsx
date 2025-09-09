@@ -27,7 +27,10 @@ const ArticlePage = () => {
                   <div className="text-center m-3">
                     <Link to={`/articles/${id}`} className="btn btn-success">SHEDA ARTICOLO</Link>
                   </div>
-                  <h5 className="card-title">{title}</h5>
+                  <ul className="list-group list-group-flush">
+                    <li className="list-group-item"><h5>{title}</h5></li>
+                    <li className="list-group-item">{price + "€"}</li>
+                  </ul>
                 </div>
               </div>
             </div>

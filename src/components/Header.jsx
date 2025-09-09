@@ -9,6 +9,9 @@ const Header = () => {
             <div>
               <h1 className="text-green">BoolArticles</h1>
             </div>
+            <div className="padding">
+              <button type="button" class="btn btn-success">MODALITA' BUDGET</button>
+            </div>
             <div>
               <ul className="list-unstyled d-flex padding">
                 <li className="me-3">
