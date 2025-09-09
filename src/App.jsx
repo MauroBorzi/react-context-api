@@ -4,21 +4,24 @@ import HomePage from "./pages/HomePage"
 import AboutPage from "./pages/AboutPage"
 import ArticlePage from "./pages/ArticlePage"
 import DetailArticle from "./pages/DetailArticle"
+import { BudgetProvider } from "./contexts/BudgetContext"
 
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route element={<DefaultLayout />}>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/about" element={<AboutPage />} />
-          <Route path="/articles">
-            <Route index element={<ArticlePage />} />
-            <Route path=":id" element={<DetailArticle />} />
+    <BudgetProvider>
+      <BrowserRouter>
+        <Routes>
+          <Route element={<DefaultLayout />}>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/about" element={<AboutPage />} />
+            <Route path="/articles">
+              <Route index element={<ArticlePage />} />
+              <Route path=":id" element={<DetailArticle />} />
+            </Route>
           </Route>
-        </Route>
-      </Routes>
-    </BrowserRouter>
+        </Routes>
+      </BrowserRouter>
+    </BudgetProvider>
   )
 }
 
