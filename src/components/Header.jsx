@@ -3,7 +3,7 @@ import { useBudget } from "../contexts/BudgetContext"
 
 const Header = () => {
 
-  const { budgetMode } = useBudget()
+  const { budgetMode, toggleBudgetMode } = useBudget()
 
   return (
     <header>
@@ -14,7 +14,7 @@ const Header = () => {
               <h1 className="text-green">BoolArticles</h1>
             </div>
             <div className="padding">
-              <button type="button" class="btn btn-success">{ }</button>
+              <button type="button" class="btn btn-success" onClick={toggleBudgetMode}>{budgetMode ? 'Disattiva modalità budget' : 'Attiva modalità budget'}</button>
             </div>
             <div>
               <ul className="list-unstyled d-flex padding">

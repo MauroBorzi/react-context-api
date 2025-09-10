@@ -1,10 +1,14 @@
 import axios from "axios"
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { useBudget } from "../contexts/BudgetContext"
 
 const ArticlePage = () => {
 
   const [fromData, setFromData] = useState([])
+  const { budgetMode } = useBudget()
+
+  const filteredArticle = budgetMode ? fromData.filter((item) => item.price <= 30) : fromData
 
   useEffect(() => {
     axios.get('https://fakestoreapi.com/products')
@@ -17,7 +21,7 @@ const ArticlePage = () => {
         <div className="col-12">
           <h1 className="text-center text-green">ARTICOLI</h1>
         </div>
-        {fromData.map(art => {
+        {filteredArticle.map(art => {
           const { id, image, price, title } = art
           return (
             <div className="col-12 col-md-4 col-lg-3" key={id}>
